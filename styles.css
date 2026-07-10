@@ -1,14 +1,14 @@
 :root {
   color-scheme: light;
-  --bg: #f3efe7;
-  --panel: rgba(255, 255, 255, 0.65);
-  --panel-strong: rgba(255, 255, 255, 0.82);
-  --text: #0f1720;
-  --muted: #5a6472;
-  --accent: #0a5c55;
-  --accent-2: #b78b4a;
-  --border: rgba(15, 23, 32, 0.1);
-  --shadow: 0 30px 80px rgba(22, 31, 44, 0.12);
+  --bg: #f4efe6;
+  --panel: rgba(255, 255, 255, 0.62);
+  --panel-strong: rgba(255, 255, 255, 0.84);
+  --text: #101821;
+  --muted: #5c6672;
+  --accent: #0d5a54;
+  --accent-2: #8f6a33;
+  --border: rgba(16, 24, 33, 0.1);
+  --shadow: 0 28px 70px rgba(18, 28, 41, 0.14);
 }
 
 * {
@@ -24,9 +24,9 @@ body {
   font-family: "Manrope", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(10, 92, 85, 0.13), transparent 34%),
-    radial-gradient(circle at top right, rgba(183, 139, 74, 0.15), transparent 28%),
-    linear-gradient(180deg, #f7f3ec 0%, var(--bg) 55%, #efe7db 100%);
+    radial-gradient(circle at top left, rgba(13, 90, 84, 0.14), transparent 32%),
+    radial-gradient(circle at top right, rgba(143, 106, 51, 0.14), transparent 27%),
+    linear-gradient(180deg, #f7f4ee 0%, var(--bg) 52%, #eee5d8 100%);
   min-height: 100vh;
 }
 
@@ -41,8 +41,8 @@ a {
   pointer-events: none;
   background-image: linear-gradient(rgba(15, 23, 32, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(15, 23, 32, 0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.24), transparent 80%);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.28), transparent 82%);
 }
 
 .page {
@@ -71,6 +71,22 @@ a {
   gap: 12px;
   font-weight: 800;
   letter-spacing: 0.02em;
+}
+
+.brand > div {
+  display: grid;
+  gap: 2px;
+}
+
+.brand-name {
+  font-size: 0.98rem;
+}
+
+.brand-tag {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
 }
 
 .brand-mark {
