@@ -78,6 +78,15 @@ a {
   gap: 2px;
 }
 
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(16, 24, 33, 0.12);
+}
+
 .brand-name {
   font-size: 0.98rem;
 }
@@ -191,6 +200,22 @@ h1 {
 
 .hero-card {
   padding: 26px;
+}
+
+.hero-logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.hero-logo {
+  width: min(100%, 260px);
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(245, 239, 228, 0.9));
+  padding: 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .card-badge {
@@ -331,5 +356,10 @@ h2 {
 
   .cta {
     padding: 22px;
+  }
+
+  .brand-logo {
+    width: 42px;
+    height: 42px;
   }
 }
