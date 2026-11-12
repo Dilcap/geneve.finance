@@ -12,7 +12,7 @@ const pagesDir = path.join(root, 'pages');
 
 for (const file of fs.readdirSync(pagesDir)) {
   if (!file.endsWith('.html')) continue;
-  const raw = fs.readFileSync(path.join(pagesDir, file), 'utf8');
+  const raw = fs.readFileSync(path.join(pagesDir, file), 'utf8').replace(/\r\n/g, '\n');
 
   const titleMatch = raw.match(/^TITLE:\s*(.+)$/m);
   const descMatch = raw.match(/^DESCRIPTION:\s*(.+)$/m);
