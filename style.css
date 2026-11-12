@@ -1407,3 +1407,12 @@ button.megamenu-item {
   .megamenu-links { grid-template-columns: 1fr; }
   .megamenu-panel { padding: 18px 0 20px; }
 }
+
+/* Listes de liens sur les bandeaux rouges : texte blanc */
+.band .index-list li {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.band .index-list a { color: #fff; text-decoration: none; }
+.band .index-list a:hover { text-decoration: underline; text-underline-offset: 4px; }
