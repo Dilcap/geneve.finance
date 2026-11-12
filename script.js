@@ -205,3 +205,37 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     })
     .catch(showUnavailable);
 })();
+
+/* Menu en cartes : un clic déroule le sous-menu, un second clic sur le même titre le renroule. */
+(function () {
+  var menu = document.querySelector('.megamenu');
+  if (!menu) return;
+  var buttons = menu.querySelectorAll('.megamenu-item');
+
+  function closeAll(except) {
+    buttons.forEach(function (btn) {
+      if (btn === except) return;
+      btn.setAttribute('aria-expanded', 'false');
+      var panel = document.getElementById(btn.getAttribute('aria-controls'));
+      if (panel) panel.hidden = true;
+    });
+  }
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = document.getElementById(btn.getAttribute('aria-controls'));
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      closeAll(btn);
+      btn.setAttribute('aria-expanded', String(!open));
+      if (panel) panel.hidden = open;
+    });
+  });
+
+  document.addEventListener('click', function (event) {
+    if (!menu.contains(event.target)) closeAll(null);
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closeAll(null);
+  });
+})();
