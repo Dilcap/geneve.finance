@@ -98,10 +98,10 @@ strong { font-weight: 600; }
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--red);
+  color: var(--ink);
 }
 
-.topnav a:hover { color: var(--red-dark); text-decoration: underline; text-underline-offset: 6px; }
+.topnav a:hover { color: var(--red); text-decoration: underline; text-underline-offset: 6px; }
 
 .topnav-cta {
   align-self: stretch;
