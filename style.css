@@ -66,10 +66,12 @@ strong { font-weight: 600; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 32px;
   height: 72px;
 }
 
 .wordmark {
+  white-space: nowrap;
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -80,12 +82,12 @@ strong { font-weight: 600; }
 }
 
 .blason {
-  height: 34px;
+  height: 42px;
   width: auto;
   display: block;
 }
 
-.blason-footer { height: 30px; }
+.blason-footer { height: 36px; }
 
 .topnav {
   display: flex;
@@ -1220,7 +1222,7 @@ h2 {
   }
 }
 
-/* Navigation : resserrée sur écrans moyens, menu burger sous 960 px */
+/* Navigation : resserrée sur écrans moyens, menu burger sous 1080 px */
 .topnav a { white-space: nowrap; }
 
 @media (max-width: 1180px) {
@@ -1228,7 +1230,7 @@ h2 {
   .topnav a { font-size: 0.95rem; }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1080px) {
   .topbar-inner { position: relative; padding: 0 16px; }
   .nav-toggle { display: flex; }
   .topnav {
