@@ -1,127 +1,434 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Geneve Finance | M&amp;A à Genève</title>
-    <meta
-      name="description"
-      content="Conseil M&amp;A à Genève pour les fondateurs, familles et investisseurs: exécution confidentielle, valorisation, négociation et closing."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="backdrop"></div>
-    <main class="page">
-      <header class="topbar">
-        <div class="brand">
-          <img class="brand-logo" src="geneve logo.png" alt="Geneve Finance logo" />
-          <div>
-            <span class="brand-name">Geneve Finance</span>
-            <span class="brand-tag">M&amp;A Advisory</span>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendre son entreprise à Genève | Genève Finance</title>
+  <meta name="description" content="Dirigeant d’une PME ou d’une entreprise familiale à Genève ? Genève Finance vous accompagne pour valoriser, préparer et vendre ou transmettre votre entreprise en toute confidentialité.">
+  <link rel="canonical" href="https://geneve.finance/">
+  <meta property="og:title" content="Vendre son entreprise à Genève | Genève Finance">
+  <meta property="og:description" content="Dirigeant d’une PME ou d’une entreprise familiale à Genève ? Genève Finance vous accompagne pour valoriser, préparer et vendre ou transmettre votre entreprise en toute confidentialité.">
+  <meta property="og:image" content="https://geneve.finance/assets/blason-geneve.png">
+  <meta property="og:image:alt" content="Armoiries de la République et canton de Genève">
+  <meta property="og:url" content="https://geneve.finance/">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/blason-geneve.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="/" class="wordmark">
+        <img src="assets/blason-geneve.png" alt="Armoiries de Genève" class="blason">
+        Genève&nbsp;Finance
+      </a>
+      <button type="button" class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="topnav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="topnav" id="topnav">
+        <a href="#plateforme">La plateforme</a>
+        <a href="/acteurs-ma-geneve/">Acteurs M&amp;A à Genève</a>
+        <a href="#approche">Notre méthode</a>
+        <a href="#faq">Questions fréquentes</a>
+        <a href="#contact" class="topnav-cta">Échange confidentiel</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <figure class="banner banner--tinted">
+      <img src="assets/geneve-rade-vue-aerienne.jpg" alt="Vue aérienne de Genève&nbsp;: la ville, la rade et le Jet d’eau sur le Léman" fetchpriority="high">
+      <figcaption><span class="wrap">La ville, la rade et le Jet d’eau, au bord du Léman. Photo&nbsp;: Gzzz, Wikimedia Commons (CC BY-SA 3.0).</span></figcaption>
+    </figure>
+
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-main">
+          <h1>Transmettre ou vendre son entreprise à Genève</h1>
+
+          <div class="process-grid">
+            <a class="process-card" href="#approche">
+              <span class="process-number">1</span>
+              <h3>Préparer votre cession</h3>
+              <p>Définir vos objectifs financiers, projeter l’avenir de l’entreprise et choisir le type d’opération souhaité.</p>
+            </a>
+            <a class="process-card" href="#conseil">
+              <span class="process-number">2</span>
+              <h3>Être mis en relation avec les bons interlocuteurs</h3>
+              <p>La plateforme vous met en relation avec les professionnels et partenaires adaptés à votre projet.</p>
+            </a>
+            <a class="process-card" href="/cession-entreprise-geneve/">
+              <span class="process-number">3</span>
+              <h3>Réaliser la transaction</h3>
+              <p>Négocier, mener les audits et signer votre opération dans les meilleures conditions.</p>
+            </a>
           </div>
         </div>
-        <a class="ghost-link" href="#contact">Confidentiel &middot; contact</a>
-      </header>
 
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">M&amp;A à Genève</p>
-          <h1>Des opérations de fusion-acquisition menées avec précision.</h1>
-          <p class="lede">
-            Nous accompagnons fondateurs, familles et investisseurs sur des
-            transactions buy-side et sell-side avec une approche discrète,
-            structurée et orientée exécution.
-          </p>
-          <div class="cta-row">
-            <a class="button primary" href="#expertise">Découvrir l'expertise</a>
-            <a class="button secondary" href="#contact">Parler d'un deal</a>
+        <div class="news-carousel" aria-label="Actualités de la finance d’entreprise à Genève et en Suisse romande">
+          <p class="news-title">Actualités de la finance d’entreprise à Genève et en Suisse romande</p>
+          <div class="carousel" id="news-carousel">
+            <div class="carousel-track" id="news-track">
+              <div class="carousel-slide is-placeholder">
+                <div class="carousel-copy">
+                  <p class="carousel-headline">Chargement des actualités…</p>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="carousel-btn carousel-prev" aria-label="Actualité précédente">&lsaquo;</button>
+            <button type="button" class="carousel-btn carousel-next" aria-label="Actualité suivante">&rsaquo;</button>
+            <div class="carousel-dots" id="news-dots"></div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <aside class="hero-card">
-          <div class="hero-logo-wrap">
-            <img class="hero-logo" src="geneve logo.png" alt="" aria-hidden="true" />
-          </div>
-          <div class="card-badge">Transaction room</div>
-          <div class="metric">
-            <span>Origination</span>
-            <strong>Confidentielle</strong>
-          </div>
-          <div class="metric">
-            <span>Analyse</span>
-            <strong>360°</strong>
-          </div>
-          <div class="metric">
-            <span>Process</span>
-            <strong>Sign &amp; close</strong>
-          </div>
-          <p>
-            Un accompagnement pensé pour les environnements où la vitesse,
-            la confidentialité et la rigueur documentaire font la différence.
-          </p>
-        </aside>
-      </section>
+    <section class="band" id="acteurs-ma">
+      <div class="wrap band-inner">
+        <h2>Qui sont les acteurs du M&amp;A à Genève&nbsp;?</h2>
+        <p>Boutiques indépendantes, banques privées, banques d’affaires internationales&nbsp;: la place genevoise réunit des conseils en fusions-acquisitions de toutes tailles, chacun avec son positionnement et ses secteurs de prédilection.</p>
+        <p class="band-action"><a href="/acteurs-ma-geneve/" class="btn btn-light">Découvrir les acteurs M&amp;A à Genève</a></p>
+      </div>
+    </section>
 
-      <section class="section" id="expertise">
-        <div class="section-heading">
-          <p class="eyebrow">Notre approche</p>
-          <h2>Une exécution M&amp;A adaptée au marché genevois.</h2>
+    <section class="section" id="situations">
+      <div class="wrap">
+        <div class="section-head" style="margin-bottom:1.5rem">
+          <p class="num">1</p>
+          <h2>Quelle est votre situation&nbsp;?</h2>
         </div>
+        <div class="situation-grid">
+          <a class="situation-card" href="/cession-entreprise-geneve/">
+            <h3>Je souhaite vendre la totalité de mon entreprise</h3>
+            <p>Préparer une cession complète, de la valorisation au closing.</p>
+          </a>
+          <a class="situation-card" href="/cession-entreprise-geneve/">
+            <h3>Je prépare mon départ à la retraite</h3>
+            <p>Organiser la transmission dans un calendrier serein et confidentiel.</p>
+          </a>
+          <a class="situation-card" href="/contact/">
+            <h3>Je souhaite vendre seulement une partie du capital</h3>
+            <p>Ouvrir le capital sans perdre le contrôle de la trajectoire.</p>
+          </a>
+          <a class="situation-card" href="/trouver-repreneur-entreprise-geneve/">
+            <h3>Je cherche un repreneur pour mon commerce ou ma petite entreprise</h3>
+            <p>Identifier des repreneurs adaptés à votre activité et à votre taille.</p>
+          </a>
+          <a class="situation-card" href="/transmission-entreprise-geneve/">
+            <h3>Je veux transmettre l’entreprise à ma famille ou à mes cadres</h3>
+            <p>Préparer une transmission familiale ou un rachat par le management.</p>
+          </a>
+          <a class="situation-card" href="/contact/">
+            <h3>Je souhaite ouvrir le capital pour accélérer mon développement</h3>
+            <p>Faire entrer un investisseur tout en sécurisant la suite.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-        <div class="grid">
-          <article class="feature">
-            <h3>Sell-side</h3>
-            <p>
-              Préparer la cession, structurer l'histoire equity, qualifier les
-              acquéreurs et piloter un process compétitif.
-            </p>
+    <figure class="banner">
+      <img src="assets/rue-du-rhone.jpg" alt="La rue du Rhône à la hauteur de la place du Port, à Genève" loading="lazy">
+      <figcaption><span class="wrap">La rue du Rhône, artère des banques privées et des grandes maisons genevoises. Photo&nbsp;: MHM55, Wikimedia Commons (CC BY-SA 4.0).</span></figcaption>
+    </figure>
+
+    <section class="section" id="plateforme">
+      <div class="wrap section-grid section-grid--media">
+        <div class="section-head">
+          <p class="num">2</p>
+          <h2>Une plateforme pour tous les dirigeants genevois</h2>
+        </div>
+        <div class="section-body">
+          <p>Genève Finance n’est pas un cabinet de conseil parmi d’autres&nbsp;: c’est une <strong>plateforme dédiée</strong> qui accompagne les dirigeants du bassin genevois dans la vente ou la transmission de leur entreprise, quelle que soit sa taille.</p>
+          <p>Que vous dirigiez une PME familiale, une société de services, une entreprise industrielle, un commerce ou une activité artisanale, constituée en SA, en Sàrl ou en raison individuelle, nous vous accompagnons avec la même exigence de préparation, de confidentialité et de mise en relation avec les bons interlocuteurs.</p>
+          <ul class="index-list cols-2">
+            <li>Vente totale ou partielle d’une SA ou d’une Sàrl</li>
+            <li>Transmission d’une société familiale</li>
+            <li>Vente d’un fonds de commerce ou d’une clientèle</li>
+            <li>Cession d’une activité artisanale ou d’un commerce de proximité</li>
+            <li>Ouverture du capital à un investisseur</li>
+            <li>Recherche d’un repreneur, stratégique, financier ou personne physique</li>
+            <li>Rachat par le management ou les cadres</li>
+            <li>Départ à la retraite du dirigeant</li>
+          </ul>
+          <p>Nous intervenons auprès d’entreprises issues de nombreux secteurs&nbsp;: services aux entreprises, industrie de précision, horlogerie et sous-traitance, négoce, commerce, artisanat, logiciels, santé, sciences de la vie, construction, hôtellerie-restauration et activités spécialisées.</p>
+        </div>
+        <figure class="section-media">
+          <img src="assets/bassin-genevois-mont-blanc.jpg" alt="Vue aérienne du bassin genevois, du Léman et de la chaîne du Mont-Blanc" loading="lazy">
+          <figcaption>Le bassin genevois, entre Léman, Salève et Mont-Blanc. Photo&nbsp;: Sdnegel, Wikimedia Commons (CC BY-SA 4.0).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="approche">
+      <div class="wrap section-grid">
+        <div class="section-head">
+          <p class="num">3</p>
+          <h2>Notre méthode, en 6 étapes</h2>
+        </div>
+        <div class="section-body">
+          <p>Une cession d’entreprise réussie se prépare généralement plusieurs mois avant la mise sur le marché. Genève Finance structure votre projet autour d’un processus clair, rigoureux et confidentiel.</p>
+          <p>Avant même de lancer une opération, il est souvent utile de&nbsp;:</p>
+          <ul class="index-list cols-2">
+            <li>Réduire la dépendance au dirigeant</li>
+            <li>Sécuriser les principaux contrats clients</li>
+            <li>Formaliser les processus internes</li>
+            <li>Améliorer le reporting financier</li>
+            <li>Documenter les revenus récurrents</li>
+            <li>Diversifier le portefeuille clients</li>
+            <li>Clarifier les éléments exceptionnels dans les comptes</li>
+            <li>Séparer les actifs privés de ceux de l’entreprise</li>
+          </ul>
+          <p>Cette préparation peut faciliter la vente, réduire les points de négociation et améliorer la valorisation finale. Vient ensuite le processus en six étapes&nbsp;:</p>
+
+          <ol class="steps">
+            <li class="step">
+              <div class="step-body">
+                <h3>Comprendre votre projet de cession</h3>
+                <p>Nous commençons par analyser votre situation, vos motivations et vos objectifs. Souhaitez-vous vendre la totalité de votre entreprise, céder un fonds de commerce, préparer votre départ à la retraite, transmettre à vos cadres ou vous adosser à un groupe pour accélérer votre développement&nbsp;?</p>
+                <p>Cette première étape permet de définir une stratégie de cession cohérente avec vos priorités personnelles, professionnelles et financières.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-body">
+                <h3>Valoriser votre entreprise</h3>
+                <p>La valorisation est une étape déterminante pour vendre son entreprise. Nous réalisons une analyse financière et stratégique afin d’estimer une fourchette de valeur réaliste, défendable et adaptée au marché. Cette évaluation prend notamment en compte le chiffre d’affaires et la rentabilité, l’EBITDA retraité, la récurrence des revenus, le portefeuille clients, le positionnement concurrentiel, les perspectives de croissance, la dépendance au dirigeant, les actifs matériels et immatériels, les multiples observés dans votre secteur et les synergies potentielles pour un acquéreur.</p>
+                <p>L’objectif n’est pas simplement d’afficher un prix élevé, mais de construire une valorisation crédible permettant de maximiser la valeur réellement obtenue lors de la transaction.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-body">
+                <h3>Préparer un dossier de présentation convaincant</h3>
+                <p>Nous préparons les documents nécessaires à la présentation de votre entreprise auprès des acquéreurs potentiels. Le dossier met en avant les forces de votre société, son modèle économique, ses performances financières, ses avantages concurrentiels et ses perspectives de développement.</p>
+                <p>Les informations sensibles sont communiquées progressivement et uniquement après la signature d’un engagement de confidentialité.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-body">
+                <h3>Identifier et approcher les meilleurs acquéreurs</h3>
+                <p>Genève Finance vous met en relation avec des acquéreurs correspondant au profil de votre entreprise et à vos objectifs de cession&nbsp;: entreprises concurrentes, groupes suisses ou étrangers souhaitant s’implanter à Genève, sociétés en croissance externe, family offices, repreneurs personnes physiques, cadres de l’entreprise ou investisseurs adaptés aux petites structures.</p>
+                <p>Les prises de contact sont réalisées de manière ciblée, discrète et confidentielle.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-body">
+                <h3>Organiser les offres et négocier la transaction</h3>
+                <p>Nous analysons les manifestations d’intérêt et les offres reçues afin de comparer non seulement le prix proposé, mais également l’ensemble des conditions de la transaction. Nous vous accompagnons dans la négociation de la lettre d’intention, notamment sur&nbsp;:</p>
+                <ul class="dash-list">
+                  <li>le prix de cession et les modalités de paiement&nbsp;;</li>
+                  <li>les compléments de prix (earn-out)&nbsp;;</li>
+                  <li>le niveau de trésorerie et d’endettement&nbsp;;</li>
+                  <li>les déclarations et garanties du vendeur&nbsp;;</li>
+                  <li>la période d’accompagnement du dirigeant&nbsp;;</li>
+                  <li>les conditions suspensives et le calendrier de réalisation&nbsp;;</li>
+                  <li>les engagements de non-concurrence.</li>
+                </ul>
+                <p>La mise en concurrence de plusieurs acquéreurs permet généralement d’améliorer le prix, de réduire les risques et de sécuriser les conditions de sortie, y compris lorsque la transaction porte sur un commerce, une petite société ou une activité artisanale.</p>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-body">
+                <h3>Piloter les audits jusqu’à la signature</h3>
+                <p>Après la sélection d’un acquéreur, nous coordonnons le processus de due diligence avec vos conseils juridiques, fiscaux et fiduciaires. Nous restons présents jusqu’à la signature de la convention de cession et à la réalisation définitive de l’opération.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="conseil">
+      <div class="wrap section-grid">
+        <div class="section-head">
+          <p class="num">4</p>
+          <h2>Pourquoi passer par Genève Finance plutôt que seul&nbsp;?</h2>
+        </div>
+        <div class="section-body">
+          <p>Une vente d’entreprise mobilise des compétences financières, stratégiques, commerciales, juridiques et humaines. Passer par la plateforme permet au dirigeant de continuer à gérer son activité tout en étant mis en relation avec les bons interlocuteurs pour structurer et piloter la transaction.</p>
+          <p>Notre accompagnement permet notamment de&nbsp;:</p>
+          <ul class="index-list cols-2">
+            <li>Préparer l’entreprise avant sa mise en vente</li>
+            <li>Déterminer une valorisation cohérente</li>
+            <li>Présenter la société sous son meilleur angle</li>
+            <li>Accéder à davantage d’acquéreurs qualifiés</li>
+            <li>Préserver la confidentialité de l’opération</li>
+            <li>Créer une dynamique concurrentielle</li>
+            <li>Négocier les meilleures conditions</li>
+            <li>Anticiper les risques de rupture du processus</li>
+            <li>Coordonner les différents interlocuteurs</li>
+            <li>Réduire la charge de travail du dirigeant</li>
+          </ul>
+          <p>La confidentialité est essentielle lors d’une opération de cession, a fortiori sur une place où les milieux d’affaires se connaissent bien&nbsp;: une diffusion prématurée de l’information peut inquiéter les collaborateurs, fragiliser certaines relations commerciales ou alerter les concurrents. Nous mettons en place un processus de vente contrôlé qui limite la circulation des informations sensibles&nbsp;: l’identité de votre entreprise n’est communiquée qu’aux acquéreurs sélectionnés, après validation de votre part et signature d’un accord de confidentialité.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="expertises">
+      <div class="wrap">
+        <p class="num">&nbsp;</p>
+        <h2 style="margin-bottom:32px">Approfondir un sujet précis</h2>
+        <ul class="index-list cols-2" style="max-width:none">
+          <li><a href="/cession-entreprise-geneve/" style="color:inherit">Le guide complet de la cession d’entreprise à Genève</a></li>
+          <li><a href="/valorisation-entreprise-geneve/" style="color:inherit">Comment valoriser son entreprise avant de la vendre</a></li>
+          <li><a href="/transmission-entreprise-geneve/" style="color:inherit">Organiser la transmission d’une entreprise familiale</a></li>
+          <li><a href="/trouver-repreneur-entreprise-geneve/" style="color:inherit">Trouver et qualifier le bon repreneur</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="geneve">
+      <div class="wrap section-grid section-grid--media section-grid--media-left">
+        <div class="section-head">
+          <p class="num">5</p>
+          <h2>Une expertise locale du marché genevois</h2>
+        </div>
+        <div class="section-body">
+          <p>Genève réunit sur un territoire restreint une concentration rare de PME, d’entreprises familiales, de maisons horlogères, de sociétés de négoce, de banques privées, d’acteurs des sciences de la vie et de sièges de groupes internationaux. Cette ouverture sur le monde en fait une place attractive pour les opérations de cession, d’acquisition et de rapprochement d’entreprises.</p>
+          <p>Notre connaissance de l’écosystème genevois et romand nous permet d’identifier des acquéreurs locaux, suisses ou internationaux susceptibles d’être intéressés par votre entreprise, en tenant compte des spécificités du droit suisse et de la fiscalité cantonale.</p>
+          <p>Nous intervenons à Genève et dans l’ensemble du canton, notamment à Carouge, Lancy, Vernier, Meyrin, Plan-les-Ouates, Onex, Thônex et Chêne-Bourg, ainsi que dans le Grand Genève, de Nyon et de La Côte vaudoise au Genevois français.</p>
+        </div>
+        <figure class="section-media section-media--fixed">
+          <div class="section-media-bg" style="background-image:url('assets/jet-deau-coucher-soleil.jpg')" role="img" aria-label="Le Jet d’eau et le port des Eaux-Vives au coucher du soleil, à Genève"></div>
+          <figcaption>Le Jet d’eau au coucher du soleil. Photo&nbsp;: John Samuel, Wikimedia Commons (CC BY-SA 4.0).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="ecosysteme">
+      <div class="wrap section-grid">
+        <div class="section-head">
+          <p class="num">6</p>
+          <h2>Ceux qui font vivre l’écosystème genevois</h2>
+        </div>
+        <div class="section-body encadres">
+
+          <article class="encadre">
+            <figure class="encadre-media">
+              <img src="assets/hotel-de-ville-geneve.jpg" alt="La cour de l’Hôtel de Ville de Genève, dans la Vieille-Ville" loading="lazy">
+              <figcaption>La cour de l’Hôtel de Ville, cœur de la vie publique genevoise. Photo&nbsp;: Bart van Poll, Wikimedia Commons (CC BY-SA 2.0).</figcaption>
+            </figure>
+            <div class="encadre-body">
+              <p class="encadre-kicker">Média</p>
+              <h3>Le Temps, le quotidien de référence édité à Genève</h3>
+              <p>Né le 18 mars 1998, <strong>Le Temps</strong> est issu de la fusion du <strong>Journal de Genève et Gazette de Lausanne</strong> et du <strong>Nouveau Quotidien</strong>. Le Journal de Genève, fondé en 1826, avait longtemps été l’un des titres phares de Suisse romande pour la politique, la finance et l’économie&nbsp;: Le Temps en a hérité l’exigence.</p>
+              <p>Édité à Genève, avec des rédactions à Lausanne, Berne, Neuchâtel, Sion et Zurich, le quotidien appartient depuis 2021 à la <strong>fondation Aventinus</strong>. Pour un dirigeant, ses pages économie sont un bon moyen de suivre les transactions, les successions et les grandes tendances des entreprises romandes.</p>
+            </div>
           </article>
-          <article class="feature">
-            <h3>Buy-side</h3>
-            <p>
-              Identifier des cibles pertinentes, sécuriser la thèse d'acquisition
-              et accompagner la négociation jusqu'au closing.
-            </p>
-          </article>
-          <article class="feature">
-            <h3>Valorisation</h3>
-            <p>
-              Construire une lecture claire de la valeur, des synergies et des
-              points de friction pour mieux décider.
-            </p>
-          </article>
-        </div>
-      </section>
 
-      <section class="section split">
-        <div>
-          <p class="eyebrow">Genève</p>
-          <h2>Un centre naturel pour les transactions transfrontalières.</h2>
+          <article class="encadre">
+            <figure class="encadre-media">
+              <img src="assets/place-bourg-de-four.jpg" alt="La place du Bourg-de-Four, dans la Vieille-Ville de Genève" loading="lazy">
+              <figcaption>La place du Bourg-de-Four, au cœur de la Vieille-Ville. Photo&nbsp;: 3lisai-4u, Wikimedia Commons (CC0).</figcaption>
+            </figure>
+            <div class="encadre-body">
+              <p class="encadre-kicker">Organisation patronale</p>
+              <h3>La FER Genève, la maison des entrepreneurs</h3>
+              <p>Issue du Groupe patronal interprofessionnel fondé en 1928, la <strong>Fédération des Entreprises Romandes Genève</strong> est l’organisation patronale faîtière du canton. Elle défend l’économie privée, nourrit la réflexion sur l’évolution de la société et met en relation ses membres et partenaires.</p>
+              <p>Aux côtés de la <strong>Chambre de commerce, d’industrie et des services de Genève</strong>, qui fédère quelque 2&nbsp;800 entreprises membres, la FER Genève offre aux dirigeants des services très concrets, des assurances sociales au conseil juridique. Deux lieux où se croisent les patrons genevois, et où se préparent bien des successions.</p>
+            </div>
+          </article>
+
         </div>
-        <p class="split-text">
-          Genève réunit familles entrepreneuriales, holdings, investisseurs
-          internationaux et secteurs de niche. Le site reflète cette réalité:
-          sobre, international, exigeant et conçu pour inspirer la confiance dès
-          les premiers instants.
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap section-grid">
+        <div class="section-head">
+          <h2>Questions fréquentes sur la vente d’entreprise à Genève</h2>
+        </div>
+        <div class="section-body faq">
+          <details>
+            <summary>Comment vendre son entreprise à Genève&nbsp;?</summary>
+            <p>La vente d’une entreprise commence par la définition des objectifs du dirigeant, la valorisation de la société et la préparation d’un dossier de présentation. Des acquéreurs qualifiés sont ensuite identifiés et approchés de manière confidentielle. Les offres sont comparées avant la négociation, la réalisation des audits et la signature de la convention de cession.</p>
+          </details>
+          <details>
+            <summary>Combien de temps faut-il pour vendre une entreprise&nbsp;?</summary>
+            <p>Une opération de cession peut généralement nécessiter plusieurs mois. La durée varie selon la taille de l’entreprise, son secteur, sa préparation, le nombre d’acquéreurs potentiels et la complexité des négociations.</p>
+          </details>
+          <details>
+            <summary>Comment calculer le prix de vente d’une entreprise&nbsp;?</summary>
+            <p>Le prix peut être estimé à partir de plusieurs méthodes&nbsp;: multiples d’EBITDA, comparaison avec des transactions similaires, actualisation des flux de trésorerie ou valorisation des actifs. Le prix final dépend également de l’intérêt stratégique des acquéreurs et de la concurrence créée pendant le processus.</p>
+          </details>
+          <details>
+            <summary>Le gain réalisé sur la vente de mes actions est-il imposé&nbsp;?</summary>
+            <p>En Suisse, le gain en capital réalisé par une personne physique sur la vente d’actions détenues dans sa fortune privée est en principe exonéré d’impôt sur le revenu. Des exceptions existent toutefois, par exemple en cas de liquidation partielle indirecte ou de transposition, et la situation est différente pour une raison individuelle. Ces points doivent être analysés en amont avec un fiscaliste.</p>
+          </details>
+          <details>
+            <summary>La vente de mon entreprise restera-t-elle confidentielle&nbsp;?</summary>
+            <p>Oui. Les acquéreurs sont contactés progressivement et les informations identifiantes ne sont communiquées qu’après la signature d’un engagement de confidentialité. Le dirigeant conserve un contrôle sur les entreprises et investisseurs approchés.</p>
+          </details>
+          <details>
+            <summary>Faut-il informer les collaborateurs avant de vendre son entreprise&nbsp;?</summary>
+            <p>Cela dépend de la forme de l’opération. En cas de transfert de l’entreprise ou d’une partie de celle-ci, le Code des obligations prévoit le transfert des rapports de travail et l’information préalable des travailleurs ou de leur représentation. Ce sujet doit être anticipé avec les conseils juridiques chargés de l’opération.</p>
+          </details>
+          <details>
+            <summary>Puis-je vendre mon entreprise tout en restant dirigeant&nbsp;?</summary>
+            <p>Oui. Certaines opérations permettent au dirigeant de céder une partie de ses actions, de réinvestir aux côtés de l’acquéreur ou de rester à la tête de l’entreprise pendant une période définie.</p>
+          </details>
+          <details>
+            <summary>Pourquoi passer par une plateforme comme Genève Finance&nbsp;?</summary>
+            <p>Une plateforme dédiée à l’écosystème genevois connaît le tissu économique local, les investisseurs, les entreprises en croissance externe et les spécificités du marché suisse. Elle peut également élargir la recherche à des acquéreurs en Suisse alémanique, en France voisine et à l’international.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--photo" id="contact" style="background-image: url('assets/rade-jet-deau.jpg')">
+      <div class="wrap band-inner">
+        <h2>Confiez votre projet à la plateforme dédiée aux dirigeants genevois</h2>
+        <p>Vous avez consacré plusieurs années à construire et développer votre entreprise. Sa vente ou sa transmission mérite une préparation rigoureuse, une approche confidentielle et une mise en relation avec les bons interlocuteurs.</p>
+        <p>De la première réflexion jusqu’à la signature définitive, Genève Finance vous accompagne à chaque étape de votre projet de <strong>vente ou de transmission d’entreprise à Genève</strong> avec une exigence&nbsp;: protéger vos intérêts, préserver la confidentialité du projet et obtenir les meilleures conditions possibles.</p>
+        <p class="band-action"><a href="mailto:contact@repertoire.finance" class="btn btn-light">Organiser un entretien confidentiel</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="wordmark footer-mark">
+          <img src="assets/blason-geneve.png" alt="Armoiries de Genève" class="blason blason-footer">
+          Genève&nbsp;Finance
         </p>
-      </section>
+        <p class="footer-desc">Plateforme d’accompagnement à la vente et à la transmission d’entreprise à Genève et dans le Grand Genève.</p>
+      </div>
+      <div>
+        <p class="footer-title">Nos expertises</p>
+        <ul class="footer-links">
+          <li><a href="/cession-entreprise-geneve/">Céder son entreprise à Genève</a></li>
+          <li><a href="/valorisation-entreprise-geneve/">Valorisation d’entreprise</a></li>
+          <li><a href="/transmission-entreprise-geneve/">Transmission familiale</a></li>
+          <li><a href="/trouver-repreneur-entreprise-geneve/">Trouver un repreneur</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Plan du site</p>
+        <ul class="footer-links">
+          <li><a href="/acteurs-ma-geneve/">Acteurs M&amp;A à Genève</a></li>
+          <li><a href="#plateforme">La plateforme</a></li>
+          <li><a href="#approche">Notre méthode</a></li>
+          <li><a href="#faq">Questions fréquentes</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Contact</p>
+        <p><a href="mailto:contact@repertoire.finance" class="footer-mail">contact@repertoire.finance</a></p>
+        <p class="footer-desc">Genève, Suisse</p>
+      </div>
+    </div>
+    <div class="wrap footer-legal">
+      <p>© 2026 Genève Finance. Tous droits réservés. Photos du bandeau d’actualités&nbsp;: MHM55, JoachimKohler-HB (CC BY-SA 4.0) et Benoît Prieur (CC0), Wikimedia Commons&nbsp;; photo du bandeau de contact&nbsp;: Thibaut120094 (CC BY 4.0).</p>
+    </div>
+  </footer>
 
-      <section class="section cta" id="contact">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Discutons de votre prochaine opération M&amp;A.</h2>
-        </div>
-        <a class="button primary dark" href="mailto:contact@geneve.finance">
-          contact@geneve.finance
-        </a>
-      </section>
-    </main>
-  </body>
+  <script src="script.js" defer></script>
+</body>
 </html>
