@@ -1250,3 +1250,97 @@ h2 {
   .topnav a { width: 100%; padding: 14px 24px; border-top: 1px solid var(--line); }
   .topnav-cta { margin-right: 0; padding: 14px 24px; }
 }
+
+/* ---------- Menu principal en cartes (façon banque cantonale) ---------- */
+
+.megamenu {
+  position: relative;
+  z-index: 15;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+}
+
+.megamenu-inner {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.megamenu-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 18px 40px 18px 18px;
+  text-decoration: none;
+  border-left: 1px solid var(--line);
+  transition: background 0.15s ease;
+}
+
+.megamenu-item:last-child { border-right: 1px solid var(--line); }
+
+.megamenu-item::after {
+  content: "+";
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--red);
+}
+
+.megamenu-item:hover { background: var(--paper-deep); }
+
+.megamenu-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.megamenu-sub {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.35;
+}
+
+@media (max-width: 1080px) {
+  .megamenu-inner {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0;
+  }
+  .megamenu-inner::-webkit-scrollbar { display: none; }
+  .megamenu-item {
+    flex: 0 0 auto;
+    min-width: 168px;
+    scroll-snap-align: start;
+    padding: 14px 38px 14px 16px;
+  }
+  .megamenu-item:first-child { border-left: 0; }
+  .megamenu-title { font-size: 1rem; }
+  .megamenu-sub { font-size: 0.82rem; }
+}
+
+/* ---------- Fiches des acteurs : 2 puis 1 par ligne sur petits écrans ---------- */
+
+@media (max-width: 920px) {
+  .team-grid,
+  .proof-grid,
+  .case-grid,
+  .testimonial-grid,
+  .situation-grid,
+  .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .team-grid,
+  .proof-grid,
+  .case-grid,
+  .testimonial-grid,
+  .situation-grid,
+  .process-grid { grid-template-columns: 1fr; }
+}
