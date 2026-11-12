@@ -700,6 +700,38 @@ strong { font-weight: 600; }
 
 .encadre-body p:last-child { margin-bottom: 0; }
 
+/* Témoignage */
+.temoignage { grid-template-columns: minmax(200px, 34%) minmax(0, 1fr); }
+.temoignage-media { padding: 28px 0 28px 28px; align-self: start; }
+.temoignage-media img {
+  filter: none;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 4 / 5;
+  object-position: 50% 15%;
+  border: 1px solid var(--line);
+}
+@media (max-width: 1100px) {
+  .temoignage-media { padding: 24px 24px 0; }
+  .temoignage-media img { height: auto; max-width: 280px; }
+}
+.temoignage-quote {
+  margin: 0 0 18px;
+  padding-left: 18px;
+  border-left: 2px solid var(--gold);
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink);
+}
+.temoignage-quote p { margin: 0 0 12px; }
+.temoignage-quote p:last-child { margin-bottom: 0; }
+.temoignage-author {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+.temoignage-author strong { color: var(--ink); }
+
 @media (max-width: 1100px) {
   .encadre { grid-template-columns: 1fr; }
   .encadre-media img { height: 220px; min-height: 0; }
