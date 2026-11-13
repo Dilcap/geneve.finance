@@ -232,17 +232,10 @@
 <rect x="896.00" y="960.00" width="128.00" height="64.00" fill="#0E3F8A"/>
 <rect x="960.00" y="960.00" width="64.00" height="64.00" fill="#143E8A"/>
 </g>
-<rect x="160" y="384" width="704" height="256" fill="#FFFFFF"/>
-<rect x="224" y="448" width="576" height="128" fill="#1777BD"/>
-<rect x="384" y="160" width="256" height="704" fill="#FFFFFF"/>
-<rect x="448" y="224" width="128" height="352" fill="#E6231F"/>
-<rect x="448" y="576" width="128" height="224" fill="#1777BD"/>
-<polygon points="384,512 448,448 448,496 384,560" fill="#E6231F"/>
-<polygon points="576,528 640,464 640,512 576,576" fill="#E6231F"/>
-<polygon points="448,448 496,400 496,448" fill="#0E3F8A"/>
-<polygon points="576,576 528,624 528,576" fill="#0E3F8A"/>
-<polygon points="304,448 448,304 496,304 304,496" fill="#E6231F"/>
-<polygon points="304,496 496,304 544,304 544,448 496,448 496,400 352,544 304,544" fill="#FFFFFF"/>
-<polygon points="720,576 576,720 528,720 720,528" fill="#1777BD"/>
-<polygon points="720,528 528,720 480,720 480,576 528,576 528,624 672,480 720,480" fill="#FFFFFF"/>
+<g fill="none" stroke="#FFFFFF" stroke-linejoin="miter">
+<path d="M437,392 A170,170 0 1 0 487,512 H352" stroke-width="90"/>
+<path d="M760,727 V362 A86,86 0 0 1 846,276 H902" stroke-width="88"/>
+<path d="M690,452 H880" stroke-width="80"/>
+</g>
+<circle cx="617" cy="682" r="45" fill="#FFFFFF"/>
 </svg>
