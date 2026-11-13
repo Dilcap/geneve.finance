@@ -1421,19 +1421,66 @@ button.megamenu-item {
 .section--promo { padding: 56px 0; }
 .promo-card {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 32px;
-  background: var(--paper-deep);
-  border-left: 4px solid var(--red);
-  padding: 32px 36px;
+  grid-template-columns: minmax(220px, 1fr) 2.4fr;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
 }
-.promo-logo img { display: block; width: 96px; height: 96px; border-radius: 20px; }
-.promo-body h3 { font-size: 1.3rem; line-height: 1.3; margin-bottom: 10px; }
-.promo-body p:last-child { margin-bottom: 0; color: var(--ink-soft); }
-.promo-btn { white-space: nowrap; }
+.promo-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: radial-gradient(circle at 30% 25%, #1a3366 0%, #0d2149 55%, #081633 100%);
+}
+.promo-logo img {
+  display: block;
+  width: 132px;
+  height: 132px;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease;
+}
+.promo-logo:hover img { transform: scale(1.04) rotate(-2deg); }
+.promo-body {
+  position: relative;
+  isolation: isolate;
+  padding: 44px 48px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 45%),
+    linear-gradient(135deg, #e0325a 0%, var(--red) 45%, var(--red-dark) 100%);
+}
+/* Effet stylisé : fines rayures diagonales et cercles concentriques en filigrane */
+.promo-body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.06) 0 2px, transparent 2px 14px);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 70%);
+          mask-image: linear-gradient(90deg, transparent 0%, #000 70%);
+}
+.promo-body::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -90px;
+  bottom: -110px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 0 28px rgba(255, 255, 255, 0.05), 0 0 0 56px rgba(255, 255, 255, 0.04);
+}
+.promo-body h3 { font-size: 1.4rem; line-height: 1.3; margin-bottom: 12px; color: #fff; }
+.promo-body p { margin-bottom: 24px; color: rgba(255, 255, 255, 0.92); }
+.promo-body strong { color: #fff; }
+.promo-btn { display: inline-block; }
 @media (max-width: 860px) {
-  .promo-card { grid-template-columns: 1fr; gap: 20px; padding: 28px 24px; }
-  .promo-logo img { width: 72px; height: 72px; border-radius: 16px; }
-  .promo-btn { justify-self: start; white-space: normal; }
+  .promo-card { grid-template-columns: 1fr; }
+  .promo-logo { padding: 32px; }
+  .promo-logo img { width: 96px; height: 96px; border-radius: 20px; }
+  .promo-body { padding: 32px 24px; }
 }
